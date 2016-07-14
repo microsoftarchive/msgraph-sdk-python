@@ -14,7 +14,7 @@ def main():
     client = microsoft.get_default_client(client_id='00000000481695BB',
                                           scopes=['wl.signin',
                                                     'wl.offline_access',
-                                                    'onedrive.readwrite'])
+                                                    'https://graph.microsoft.com/Files.ReadWrite'])
     auth_url = client.auth_provider.get_auth_url(redirect_uri)
 
     # Block thread until we have the code

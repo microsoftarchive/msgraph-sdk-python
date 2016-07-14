@@ -1,12 +1,12 @@
-# CommandLineFileExplorer sample 
+# CommandLineFileExplorer sample
 
 The CommanLineFileExplorer sample is a sample app written in Python and uses the Graph SDK for Python.
-The sample shows you how to work with a user's files and folders on OneDrive. In this sample, you will learn how to upload or download a file, get a sharing link, explore files and folder, and more. 
+The sample shows you how to work with a user's files and folders on OneDrive. In this sample, you will learn how to upload or download a file, get a sharing link, explore files and folder, and more.
 
 ## Set up
 
 1. If you don't have Python installed, go to [Python.org](http://python.org) and scroll over **Downloads** to choose the install for your platform. For example, choose **Download for Windows** | **Python 3.5.0** to download Python for Windows. Follow the instructions in [Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html) to complete your Python set up.
-2. Download the [Graph SDK for Python](https://github.com/OneDrive/onedrive-sdk-python/) to get the sample.
+2. Download the [Graph SDK for Python](https://github.com/MicrosoftGraph/msgraph-sdk-python/) to get the sample.
 3. Open a command prompt and type `pip install requests` to install [Requests](http://docs.python-requests.org/en/latest/).
 4. In the command prompt, type `pip install pillow` to install [Pillow](https://pypi.python.org/pypi/Pillow/3.0.0).
 5. Next, type `pip install microsoftgraph` to install the Graph SDK for Python.
@@ -26,7 +26,7 @@ The sample shows you how to work with a user's files and folders on OneDrive. In
 This sample uses the [code flow](https://dev.onedrive.com/auth/msa_oauth.htm#code-flow) to sign the user in and authenticate the app. `get_default_client` is called to get a Graph client. `get_auth_url` returns the `redirect_uri` that contains the authorization code. Next, `get_auth_code` is called to process the authorization code from the `auth_url`. Finally, `authenticate` is called to authenticate the app with the `code`.
 
 ```python
-client = onedrivesdk.get_default_client(client_id='00000000481695BB',
+client = graph.get_default_client(client_id='your_client_id',
                                             scopes=['wl.signin',
                                                     'wl.offline_access',
                                                     'onedrive.readwrite'])
@@ -74,11 +74,11 @@ def delete(client, item_id):
 
 ### Copy an item
 
-In this example, a new `ItemReference()` object is created, and then the item is copied to the ItemReference.  
+In this example, a new `ItemReference()` object is created, and then the item is copied to the ItemReference.
 
 ```python
 def paste(client, item_id, copy_item_ids):
-    ref = onedrivesdk.ItemReference()
+    ref = microsoft.ItemReference()
     ref.id = item_id
     for id in copy_item_ids:
         client.item(id=id).copy(parent_reference=ref).post()
@@ -110,8 +110,8 @@ def list_changes(client, item_id, token):
 
 ## More resources
 
-* [Graph SDK for Python](https://github.com/OneDrive/onedrive-sdk-python/)
-* [Graph API](https://dev.onedrive.com)
+* [Graph SDK for Python](https://github.com/MicrosoftGraph/msgraph-sdk-python/)
+* [Graph API](https://graph.microsoft.io)
 * [Python](https://python.org)
 
 ## Copyright
