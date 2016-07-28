@@ -7,7 +7,7 @@
 
 Once you've downloaded the Graph SDK for Python, open a command prompt and type the following to install it:
 
-<pre><code>pip install microsoftgraph</code></pre>
+<pre><code>pip install msgraph</code></pre>
 
 Next, include the SDK in your Python project by adding:
 
