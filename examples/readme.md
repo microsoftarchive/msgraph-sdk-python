@@ -9,7 +9,7 @@ The sample shows you how to work with a user's files and folders on OneDrive. In
 2. Download the [Graph SDK for Python](https://github.com/MicrosoftGraph/msgraph-sdk-python/) to get the sample.
 3. Open a command prompt and type `pip install requests` to install [Requests](http://docs.python-requests.org/en/latest/).
 4. In the command prompt, type `pip install pillow` to install [Pillow](https://pypi.python.org/pypi/Pillow/3.0.0).
-5. Next, type `pip install microsoftgraph` to install the Graph SDK for Python.
+5. Next, type `pip install msgraph` to install the Graph SDK for Python.
 
 ## Run the sample
 
