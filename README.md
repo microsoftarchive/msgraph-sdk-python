@@ -3,6 +3,8 @@
 ------------------------------------------------------------------------
 [![Build status](https://ci.appveyor.com/api/projects/status/x1cjahp817w6r455?svg=true)](https://ci.appveyor.com/project/OneDrive/vroom-client-python)
 
+*Please note that this SDK is in preview at current time -  feel free to provide feedback/report issues as appropriate.*
+
 ## Installation
 
 Once you've downloaded the Graph SDK for Python, open a command prompt and type the following to install it:
