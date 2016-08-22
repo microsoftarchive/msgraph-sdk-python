@@ -13,7 +13,7 @@ Once you've downloaded the Graph SDK for Python, open a command prompt and type 
 
 Next, include the SDK in your Python project by adding:
 
-<pre><code>from microsoft import graph</code></pre>
+<pre><code>import msgraph</code></pre>
 
 ## Authentication
 
