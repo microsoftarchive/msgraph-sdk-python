@@ -24,33 +24,24 @@ https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 
 https://login.microsoftonline.com/common/oauth2/v2.0/token
 
-You can use the following code sample to authenticate.
-
-```python
-from microsoft import graph
-from microsoft.graph.helpers import GetAuthCodeServer
-
-redirect_uri = "http://localhost:8080/"
-client_secret = "your_app_secret"
-
-client = graph.get_default_client(client_id='your_client_id',
-                                       	scopes=[msgraph])
-
-auth_url = client.auth_provider.get_auth_url(redirect_uri)
-
-#this will block until we have the code
-code = GetAuthCodeServer.get_auth_code(auth_url, redirect_uri)
-
-client.auth_provider.authenticate(code, redirect_uri, client_secret)
-```
-
-Once your app is authenticated, you should have access to the Graph API, and
-can begin making calls using the SDK.
+You must implement an authentication provider that derives from AuthProviderBase. Once that is complete, the graph client will use the supplied provider for authenticating calls to the graph.
 
 ## Examples
 
 **Note:** All examples assume that your app has already been
 [Authenticated](#authentication).
+
+### Creating a client
+
+```python
+import msgraph
+
+graph_base_url = 'https://graph.microsoft.com/v1.0/'
+http_provider = msgraph.HttpProvider()
+auth_provider = <instantiate your auth provider implementation here>
+
+client = msgraph.GraphServiceClient(graph_base_url, http_provider, auth_provider)
+```
 
 ### Upload an Item
 
@@ -81,7 +72,7 @@ returned_item = client.item(drive="me", id="root").children.add(i)
 ### Copy an Item
 
 ```python
-from microsoft.graph.item_reference import ItemReference
+from msgraph.item_reference import ItemReference
 
 ref = ItemReference()
 ref.id = "yourparent!id" #path also supported
