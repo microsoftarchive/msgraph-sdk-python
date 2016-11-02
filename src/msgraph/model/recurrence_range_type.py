@@ -10,8 +10,8 @@ from enum import Enum
 class RecurrenceRangeType(Enum):
     """The Enum RecurrenceRangeType."""
     #end Date
-    endDate = 1
+    endDate = "0"
     #no End
-    noEnd = 2
+    noEnd = "1"
     #numbered
-    numbered = 3
+    numbered = "2"

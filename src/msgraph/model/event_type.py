@@ -10,10 +10,10 @@ from enum import Enum
 class EventType(Enum):
     """The Enum EventType."""
     #single Instance
-    singleInstance = 1
+    singleInstance = "0"
     #occurrence
-    occurrence = 2
+    occurrence = "1"
     #exception
-    exception = 3
+    exception = "2"
     #series Master
-    seriesMaster = 4
+    seriesMaster = "3"

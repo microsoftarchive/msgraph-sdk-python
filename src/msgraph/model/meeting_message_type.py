@@ -10,14 +10,14 @@ from enum import Enum
 class MeetingMessageType(Enum):
     """The Enum MeetingMessageType."""
     #none
-    none = 1
+    none = "0"
     #meeting Request
-    meetingRequest = 2
+    meetingRequest = "1"
     #meeting Cancelled
-    meetingCancelled = 3
+    meetingCancelled = "2"
     #meeting Accepted
-    meetingAccepted = 4
+    meetingAccepted = "3"
     #meeting Tenatively Accepted
-    meetingTenativelyAccepted = 5
+    meetingTenativelyAccepted = "4"
     #meeting Declined
-    meetingDeclined = 6
+    meetingDeclined = "5"

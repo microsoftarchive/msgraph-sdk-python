@@ -10,6 +10,6 @@ from enum import Enum
 class InferenceClassificationType(Enum):
     """The Enum InferenceClassificationType."""
     #focused
-    focused = 1
+    focused = "0"
     #other
-    other = 2
+    other = "1"

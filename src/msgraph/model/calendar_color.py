@@ -10,24 +10,24 @@ from enum import Enum
 class CalendarColor(Enum):
     """The Enum CalendarColor."""
     #light Blue
-    lightBlue = 1
+    lightBlue = "0"
     #light Green
-    lightGreen = 2
+    lightGreen = "1"
     #light Orange
-    lightOrange = 3
+    lightOrange = "2"
     #light Gray
-    lightGray = 4
+    lightGray = "3"
     #light Yellow
-    lightYellow = 5
+    lightYellow = "4"
     #light Teal
-    lightTeal = 6
+    lightTeal = "5"
     #light Pink
-    lightPink = 7
+    lightPink = "6"
     #light Brown
-    lightBrown = 8
+    lightBrown = "7"
     #light Red
-    lightRed = 9
+    lightRed = "8"
     #max Color
-    maxColor = 10
+    maxColor = "9"
     #auto
-    auto = 11
+    auto = "10"
