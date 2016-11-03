@@ -10,8 +10,8 @@ from enum import Enum
 class AttendeeType(Enum):
     """The Enum AttendeeType."""
     #required
-    required = 1
+    required = "0"
     #optional
-    optional = 2
+    optional = "1"
     #resource
-    resource = 3
+    resource = "2"

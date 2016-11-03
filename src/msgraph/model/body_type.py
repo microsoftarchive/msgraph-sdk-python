@@ -10,6 +10,6 @@ from enum import Enum
 class BodyType(Enum):
     """The Enum BodyType."""
     #text
-    text = 1
+    text = "0"
     #html
-    html = 2
+    html = "1"

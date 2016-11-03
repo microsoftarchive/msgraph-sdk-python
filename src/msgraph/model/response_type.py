@@ -10,14 +10,14 @@ from enum import Enum
 class ResponseType(Enum):
     """The Enum ResponseType."""
     #none
-    none = 1
+    none = "0"
     #organizer
-    organizer = 2
+    organizer = "1"
     #tentatively Accepted
-    tentativelyAccepted = 3
+    tentativelyAccepted = "2"
     #accepted
-    accepted = 4
+    accepted = "3"
     #declined
-    declined = 5
+    declined = "4"
     #not Responded
-    notResponded = 6
+    notResponded = "5"

@@ -10,10 +10,10 @@ from enum import Enum
 class Sensitivity(Enum):
     """The Enum Sensitivity."""
     #normal
-    normal = 1
+    normal = "0"
     #personal
-    personal = 2
+    personal = "1"
     #private
-    private = 3
+    private = "2"
     #confidential
-    confidential = 4
+    confidential = "3"

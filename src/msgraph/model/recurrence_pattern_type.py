@@ -10,14 +10,14 @@ from enum import Enum
 class RecurrencePatternType(Enum):
     """The Enum RecurrencePatternType."""
     #daily
-    daily = 1
+    daily = "0"
     #weekly
-    weekly = 2
+    weekly = "1"
     #absolute Monthly
-    absoluteMonthly = 3
+    absoluteMonthly = "2"
     #relative Monthly
-    relativeMonthly = 4
+    relativeMonthly = "3"
     #absolute Yearly
-    absoluteYearly = 5
+    absoluteYearly = "4"
     #relative Yearly
-    relativeYearly = 6
+    relativeYearly = "5"

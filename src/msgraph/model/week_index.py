@@ -10,12 +10,12 @@ from enum import Enum
 class WeekIndex(Enum):
     """The Enum WeekIndex."""
     #first
-    first = 1
+    first = "0"
     #second
-    second = 2
+    second = "1"
     #third
-    third = 3
+    third = "3"
     #fourth
-    fourth = 4
+    fourth = "4"
     #last
-    last = 5
+    last = "5"

@@ -10,16 +10,16 @@ from enum import Enum
 class DayOfWeek(Enum):
     """The Enum DayOfWeek."""
     #sunday
-    sunday = 1
+    sunday = "0"
     #monday
-    monday = 2
+    monday = "1"
     #tuesday
-    tuesday = 3
+    tuesday = "2"
     #wednesday
-    wednesday = 4
+    wednesday = "3"
     #thursday
-    thursday = 5
+    thursday = "4"
     #friday
-    friday = 6
+    friday = "5"
     #saturday
-    saturday = 7
+    saturday = "6"

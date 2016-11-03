@@ -10,14 +10,14 @@ from enum import Enum
 class FreeBusyStatus(Enum):
     """The Enum FreeBusyStatus."""
     #free
-    free = 1
+    free = "0"
     #tentative
-    tentative = 2
+    tentative = "1"
     #busy
-    busy = 3
+    busy = "2"
     #oof
-    oof = 4
+    oof = "3"
     #working Elsewhere
-    workingElsewhere = 5
+    workingElsewhere = "4"
     #unknown
-    unknown = 6
+    unknown = "5"

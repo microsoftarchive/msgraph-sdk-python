@@ -10,8 +10,8 @@ from enum import Enum
 class Importance(Enum):
     """The Enum Importance."""
     #low
-    low = 1
+    low = "0"
     #normal
-    normal = 2
+    normal = "1"
     #high
-    high = 3
+    high = "2"
