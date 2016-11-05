@@ -162,7 +162,7 @@ class RequestBase(object):
 
         return response
 
-    def _set_query_options(self, expand=None, select=None, top=None, order_by=None):
+    def _set_query_options(self, expand=None, select=None, filter=None, top=None, skip=None, order_by=None):
         """Adds query options from a set of known parameters
 
         Args:
@@ -176,12 +176,19 @@ class RequestBase(object):
         """
         if expand:
             self.append_option(QueryOption("expand", expand))
-
+            
         if select:
             self.append_option(QueryOption("select", select))
+        
+        if filter:
+            self.append_option(QueryOption("filter", filter))
 
         if top:
             self.append_option(QueryOption("top", top))
+        
+        if skip:
+            self.append_option(QueryOption("filter", skip))
 
         if order_by:
             self.append_option(QueryOption("orderby", order_by))
+
