@@ -201,10 +201,10 @@ class RequestBase(object):
             self.append_option(QueryOption("filter", filter))
 
         if top:
-            self.append_option(QueryOption("top", top))
+            self.append_option(QueryOption("top", str(top)))
 
         if skip:
-            self.append_option(QueryOption("skip", skip))
+            self.append_option(QueryOption("skip", str(skip)))
 
         if skip_token:
             self.append_option(QueryOption("skipToken", skip_token))
