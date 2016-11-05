@@ -167,7 +167,7 @@ class RequestBase(object):
                            skip_token=None, count=False):
         """Adds query options from a set of known parameters
         Args:
-            search (str): Default None, A=a property and value pair separated 
+            search (str): Default None, a property and value pair separated 
                 by a colon.
             select (str): Default None, comma-seperated list of properties to
                 include in the response.
