@@ -2,6 +2,7 @@
 
 ------------------------------------------------------------------------
 [![Build status](https://ci.appveyor.com/api/projects/status/x1cjahp817w6r455?svg=true)](https://ci.appveyor.com/project/OneDrive/vroom-client-python)
+[![PyPI version](https://badge.fury.io/py/msgraph.svg)](https://badge.fury.io/py/msgraph)
 
 *Please note that this SDK is in preview at current time -  feel free to provide feedback/report issues as appropriate.*
 
