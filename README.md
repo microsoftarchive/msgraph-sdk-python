@@ -52,9 +52,12 @@ import msgraph
 
 graph_base_url = 'https://graph.microsoft.com/v1.0/'
 http_provider = msgraph.HttpProvider()
-auth_provider = <instantiate your auth provider implementation here>
+auth_provider = msgraph.AuthProvider(http_provider,
+                                cliend_id,
+                                auth_server_url=auth_server_url),
+                                auth_token_url=auth_token_url)
 
-client = msgraph.GraphServiceClient(graph_base_url, http_provider, auth_provider)
+client = msgraph.GraphServiceClient(graph_base_url, auth_provider, http_provider)
 ```
 
 ### Upload an Item
@@ -140,5 +143,5 @@ def run_gets(client):
         print(drive.id)
 
 loop = asyncio.get_event_loop()
-loop.run_until_complete(run_gets(client))   
+loop.run_until_complete(run_gets(client))
 ```
