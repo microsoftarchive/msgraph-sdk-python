@@ -1,5 +1,5 @@
 
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 """
 # Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 """
@@ -233,6 +233,7 @@ from .request.drive_item_delta import DriveItemDeltaRequest
 from .request.drive_item_content_request import DriveItemContentRequest, DriveItemContentRequestBuilder
 from .request.thumbnail_content_request import ThumbnailContentRequest, ThumbnailContentRequestBuilder
 from .request.graph_service_client import GraphServiceClient
+from .auth_provider import AuthProvider
 from .http_provider import HttpProvider
 from .extensions.graph_client_helper import *
 from .extensions import *

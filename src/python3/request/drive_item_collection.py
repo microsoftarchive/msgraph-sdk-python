@@ -1,14 +1,14 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 """
 # Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-# 
+#
 #  This file was generated and any changes will be overwritten.
 """
 
 from __future__ import unicode_literals
 from ..collection_base import CollectionRequestBase, CollectionResponseBase, CollectionPageBase
 from ..request_builder_base import RequestBuilderBase
-from ..request import drive_item_request_builder 
+from ..request import drive_item_request_builder
 from ..model.drive_item import DriveItem
 import json
 import asyncio
@@ -17,7 +17,7 @@ class DriveItemCollectionRequest(CollectionRequestBase):
 
     def __init__(self, request_url, client, options):
         """Initialize the DriveItemCollectionRequest
-        
+
         Args:
             request_url (str): The url to perform the DriveItemCollectionRequest
                 on
@@ -31,7 +31,7 @@ class DriveItemCollectionRequest(CollectionRequestBase):
     def get(self):
         """Gets the DriveItemCollectionPage
 
-        Returns: 
+        Returns:
             :class:`DriveItemCollectionPage<msgraph.request.drive_item_collection.DriveItemCollectionPage>`:
                 The DriveItemCollectionPage
         """
@@ -43,7 +43,7 @@ class DriveItemCollectionRequest(CollectionRequestBase):
     def get_async(self):
         """Gets the DriveItemCollectionPage in async
 
-        Yields: 
+        Yields:
             :class:`DriveItemCollectionPage<msgraph.request.drive_item_collection.DriveItemCollectionPage>`:
                 The DriveItemCollectionPage
         """
@@ -56,19 +56,19 @@ class DriveItemCollectionRequestBuilder(RequestBuilderBase):
 
     def __getitem__(self, key):
         """Get the DriveItemRequestBuilder with the specified key
-        
+
         Args:
             key (str): The key to get a DriveItemRequestBuilder for
-        
-        Returns: 
+
+        Returns:
             :class:`DriveItemRequestBuilder<msgraph.request.drive_item_request_builder.DriveItemRequestBuilder>`:
                 A DriveItemRequestBuilder for that key
         """
         return drive_item_request_builder.DriveItemRequestBuilder(self.append_to_request_url(str(key)), self._client)
 
-    def request(self,select=None, filter=None, top=None, skip=None, order_by=None, options=None):
+    def request(self, select=None, filter=None, top=None, skip=None, order_by=None, options=None):
         """Builds the DriveItemCollectionRequest
-        
+
         Args:
             expand (str): Default None, comma-separated list of relationships
                 to expand in the response.
@@ -91,7 +91,7 @@ class DriveItemCollectionRequestBuilder(RequestBuilderBase):
     def get(self):
         """Gets the DriveItemCollectionPage
 
-        Returns: 
+        Returns:
             :class:`DriveItemCollectionPage<msgraph.request.drive_item_collection.DriveItemCollectionPage>`:
                 The DriveItemCollectionPage
         """
@@ -101,7 +101,7 @@ class DriveItemCollectionRequestBuilder(RequestBuilderBase):
     def get_async(self):
         """Gets the DriveItemCollectionPage in async
 
-        Yields: 
+        Yields:
             :class:`DriveItemCollectionPage<msgraph.request.drive_item_collection.DriveItemCollectionPage>`:
                 The DriveItemCollectionPage
         """
@@ -114,7 +114,7 @@ class DriveItemCollectionResponse(CollectionResponseBase):
     @property
     def collection_page(self):
         """The collection page stored in the response JSON
-        
+
         Returns:
             :class:`DriveItemCollectionPage<msgraph.request.drive_item_collection.DriveItemCollectionPage>`:
                 The collection page
@@ -131,7 +131,7 @@ class DriveItemCollectionPage(CollectionPageBase):
 
     def __getitem__(self, index):
         """Get the DriveItem at the index specified
-        
+
         Args:
             index (int): The index of the item to get from the DriveItemCollectionPage
 
@@ -143,7 +143,7 @@ class DriveItemCollectionPage(CollectionPageBase):
 
     def drive_item(self):
         """Get a generator of DriveItem within the DriveItemCollectionPage
-        
+
         Yields:
             :class:`DriveItem<msgraph.model.drive_item.DriveItem>`:
                 The next DriveItem in the collection
@@ -153,7 +153,7 @@ class DriveItemCollectionPage(CollectionPageBase):
 
     def _init_next_page_request(self, next_page_link, client, options):
         """Initialize the next page request for the DriveItemCollectionPage
-        
+
         Args:
             next_page_link (str): The URL for the next page request
                 to be sent to
