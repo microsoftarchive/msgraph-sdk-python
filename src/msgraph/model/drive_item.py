@@ -64,7 +64,7 @@ class DriveItem(Entity):
                 The createdDateTime
         """
         if "createdDateTime" in self._prop_dict:
-            return datetime.strptime(self._prop_dict["createdDateTime"].replace("Z", ""), "%Y-%m-%dT%H:%M:%S.%f")
+            return datetime.strptime(self._prop_dict["createdDateTime"].replace("Z", ""), "%Y-%m-%dT%H:%M:%S")
         else:
             return None
 
@@ -158,7 +158,7 @@ class DriveItem(Entity):
                 The lastModifiedDateTime
         """
         if "lastModifiedDateTime" in self._prop_dict:
-            return datetime.strptime(self._prop_dict["lastModifiedDateTime"].replace("Z", ""), "%Y-%m-%dT%H:%M:%S.%f")
+            return datetime.strptime(self._prop_dict["lastModifiedDateTime"].replace("Z", ""), "%Y-%m-%dT%H:%M:%S")
         else:
             return None
 
