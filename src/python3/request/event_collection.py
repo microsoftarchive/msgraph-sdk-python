@@ -66,7 +66,7 @@ class EventCollectionRequestBuilder(RequestBuilderBase):
         """
         return event_request_builder.EventRequestBuilder(self.append_to_request_url(str(key)), self._client)
 
-    def request(self,select=None, filter=None, top=None, skip=None, order_by=None, options=None):
+    def request(self, expand=None, select=None, top=None, order_by=None, options=None):
         """Builds the EventCollectionRequest
         
         Args:
@@ -85,7 +85,7 @@ class EventCollectionRequestBuilder(RequestBuilderBase):
                 The EventCollectionRequest
         """
         req = EventCollectionRequest(self._request_url, self._client, options)
-        req._set_query_options(select=select, filter=filter, top=top, skip=skip, order_by=order_by, )
+        req._set_query_options(expand=expand, select=select, top=top, order_by=order_by)
         return req
 
     def get(self):
