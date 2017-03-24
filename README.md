@@ -2,6 +2,7 @@
 
 ------------------------------------------------------------------------
 [![Build status](https://ci.appveyor.com/api/projects/status/x1cjahp817w6r455?svg=true)](https://ci.appveyor.com/project/OneDrive/vroom-client-python)
+[![PyPI version](https://badge.fury.io/py/msgraph.svg)](https://badge.fury.io/py/msgraph)
 
 *Please note that this SDK is in preview at current time -  feel free to provide feedback/report issues as appropriate.*
 
@@ -15,7 +16,20 @@ Next, include the SDK in your Python project by adding:
 
 <pre><code>import msgraph</code></pre>
 
-## Authentication
+## Getting Started with Microsoft Graph
+
+### Registering your application
+
+Register your application to use the Microsoft Graph API by using one of the following
+supported authentication portals:
+
+* [Microsoft Application Registration Portal](https://apps.dev.microsoft.com) (**Recommended**):
+  Register a new application that authenticates using the v2.0 authentication endpoint. This endpoint authenticates both personal (Microsoft) and work or school (Azure Active Directory) accounts.
+* [Microsoft Azure Active Directory](https://manage.windowsazure.com): Register
+  a new application in your tenant's Active Directory to support work or school
+  users for your tenant, or multiple tenants.
+
+### Authentication
 
 To interact with the Graph API, your app must authenticate. Choose the [scopes](https://graph.microsoft.io/en-us/docs/authorization/permission_scopes) needed for your app.
 
@@ -29,7 +43,7 @@ You must implement an authentication provider that derives from AuthProviderBase
 ## Examples
 
 **Note:** All examples assume that your app has already been
-[Authenticated](#authentication).
+[authenticated](#authentication).
 
 ### Creating a client
 
