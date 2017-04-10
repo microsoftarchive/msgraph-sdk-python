@@ -81,7 +81,7 @@ class Session(SessionBase):
         if "path" in save_session_kwargs:
             path = save_session_kwargs["path"]
 
-        with open(path, "wb") as session_file:
+        with open(path, "wb+") as session_file:
             import pickle
             # pickle.HIGHEST_PROTOCOL is binary format. Good perf.
             pickle.dump(self, session_file, pickle.HIGHEST_PROTOCOL)
