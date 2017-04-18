@@ -184,7 +184,7 @@ class RequestBase(object):
             self.append_option(QueryOption("select", select))
 
         if top:
-            self.append_option(QueryOption("top", top))
+            self.append_option(QueryOption("$top", top))
 
         if skip:
             self.append_option(QueryOption("skip", skip))
