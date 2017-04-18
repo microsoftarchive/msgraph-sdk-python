@@ -178,7 +178,7 @@ class RequestBase(object):
             self.append_option(QueryOption("expand", expand))
 
         if filter:
-            self.append_option(QueryOption("filter", filter))
+            self.append_option(QueryOption("$filter", filter))
 
         if select:
             self.append_option(QueryOption("select", select))
