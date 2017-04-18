@@ -38,7 +38,7 @@ class GroupRequestBuilder(RequestBuilderBase):
         """
         super(GroupRequestBuilder, self).__init__(request_url, client)
 
-    def request(self, expand=None, select=None, filter=None, options=None):
+    def request(self, expand=None, select=None, top=None, filter=None, options=None):
         """Builds the GroupRequest
 
         Args:
@@ -54,7 +54,7 @@ class GroupRequestBuilder(RequestBuilderBase):
                 The GroupRequest
         """
         req = GroupRequest(self._request_url, self._client, options)
-        req._set_query_options(expand=expand, select=select, filter=filter)
+        req._set_query_options(expand=expand, select=select, top=top, filter=filter)
         return req
 
     def delete(self):
