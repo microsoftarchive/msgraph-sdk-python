@@ -54,7 +54,7 @@ class GroupRequestBuilder(RequestBuilderBase):
                 The GroupRequest
         """
         req = GroupRequest(self._request_url, self._client, options)
-        req._set_query_options(expand=None, select=None, filter=None)
+        req._set_query_options(expand=expand, select=select, filter=filter)
         return req
 
     def delete(self):
