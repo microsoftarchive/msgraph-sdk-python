@@ -175,19 +175,19 @@ class RequestBase(object):
                 that are used to sort the order of items in the response.
         """
         if expand:
-            self.append_option(QueryOption("expand", expand))
+            self.append_option(QueryOption("$expand", expand))
 
         if filter:
             self.append_option(QueryOption("$filter", filter))
 
         if select:
-            self.append_option(QueryOption("select", select))
+            self.append_option(QueryOption("$select", select))
 
         if top:
             self.append_option(QueryOption("$top", top))
 
         if skip:
-            self.append_option(QueryOption("skip", skip))
+            self.append_option(QueryOption("$skip", skip))
 
         if order_by:
-            self.append_option(QueryOption("orderby", order_by))
+            self.append_option(QueryOption("$orderby", order_by))
