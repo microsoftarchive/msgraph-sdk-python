@@ -78,7 +78,7 @@ class AuthProvider(AuthProviderBase):
 
         if sys.version_info >= (3, 4, 0):
             import asyncio
-            self._loop = loop if loop else asyncio.get_event_loop()
+            #self._loop = loop if loop else asyncio.get_event_loop()
 
     @property
     def client_id(self):
