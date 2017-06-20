@@ -125,8 +125,7 @@ collection2 = collection.next_page_request.get()
 
 ### Async operations
 
-For async operations, you create an `asyncio.coroutine` which
-implements `asyncio.as_completed`, and execute it with
+For async operations, you can create an `asyncio.coroutine` and execute it with
 `loop.run_until_complete`.
 
 ```python
