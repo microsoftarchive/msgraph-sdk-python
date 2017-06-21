@@ -111,7 +111,7 @@ class RequestBase(object):
         self._client.auth_provider.authenticate_request(self)
 
         self.append_option(HeaderOption("X-RequestStats",
-                                        "SDK-Version=python-v"+__version__))
+                                        "SdkVersion=Graph-python-"+__version__))
 
         if self.content_type:
             self.append_option(HeaderOption("Content-Type", self.content_type))
