@@ -10,6 +10,7 @@ from ..model.item_body import ItemBody
 from ..model.importance import Importance
 from ..model.recipient import Recipient
 from ..model.inference_classification_type import InferenceClassificationType
+from ..graph_object_base import GraphObjectBase
 from datetime import datetime
 
 from .outlook_item import OutlookItem
