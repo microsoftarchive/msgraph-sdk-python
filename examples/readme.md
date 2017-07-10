@@ -1,6 +1,6 @@
 # CommandLineFileExplorer sample
 
-The CommanLineFileExplorer sample is a sample app written in Python and uses the Graph SDK for Python.
+The CommandLineFileExplorer sample is a sample app written in Python and uses the Graph SDK for Python.
 The sample shows you how to work with a user's files and folders on OneDrive. In this sample, you will learn how to upload or download a file, get a sharing link, explore files and folder, and more.
 
 ## Set up
