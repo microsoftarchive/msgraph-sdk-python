@@ -31,7 +31,7 @@ supported authentication portals:
 
 ### Authentication
 
-To interact with the Graph API, your app must authenticate. Choose the [scopes](https://graph.microsoft.io/en-us/docs/authorization/permission_scopes) needed for your app.
+To interact with the Graph API, your app must authenticate. Choose the [scopes](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference) needed for your app.
 
 Graph uses OAuth to Authenticate. Use the following endpoints to authenticate:
 https://login.microsoftonline.com/common/oauth2/v2.0/authorize
@@ -128,9 +128,8 @@ collection2 = collection.next_page_request.get()
 
 ### Async operations
 
-For async operations, you create an `asyncio.coroutine` which
-implements `asyncio.ascompleted`, and execute it with
-`loop.run\_until\_complete`.
+For async operations, you can create an `asyncio.coroutine` and execute it with
+`loop.run_until_complete`.
 
 ```python
 import asyncio

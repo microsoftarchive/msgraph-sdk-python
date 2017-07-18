@@ -111,7 +111,7 @@ class RequestBase(object):
         self._client.auth_provider.authenticate_request(self)
 
         self.append_option(HeaderOption("X-RequestStats",
-                                        "SDK-Version=python-v"+__version__))
+                                        "SdkVersion=Graph-python-"+__version__))
 
         if self.content_type:
             self.append_option(HeaderOption("Content-Type", self.content_type))
@@ -162,32 +162,54 @@ class RequestBase(object):
 
         return response
 
-    def _set_query_options(self, expand=None, select=None, filter=None, top=None, skip=None, order_by=None):
-        """Adds query options from a set of known parameters
 
+    def _set_query_options(self, search=None, select=None, expand=None,
+                           order_by=None, filter=None, top=None, skip=None,
+                           skip_token=None, count=False):
+        """Adds query options from a set of known parameters
         Args:
-            expand (str): Default None, comma-seperated list of relationships
-                to expand in the response.
+            search (str): Default None, a property and value pair separated
+                by a colon.
             select (str): Default None, comma-seperated list of properties to
                 include in the response.
-            top (int): Default None, the number of items to return in a result.
+            expand (str): Default None, comma-seperated list of relationships
+                to expand in the response.
             order_by (str): Default None, comma-seperated list of properties
                 that are used to sort the order of items in the response.
+            filter (str): Default None, filters the response based on a set
+                of criteria.
+            top (int): Default None, the number of items to return in a result.
+            skip (int): Default None, the number of items to skip in a result
+                set.
+            skip_token (str): Default None, paging token that is used to get
+                the next set of results.
+            count (bool): Default False, a collection and the number of items
+                in the collection.
         """
+
+        if search:
+            self.append_option(QueryOption("$search", search))
+
+        if select:
+            self.append_option(QueryOption("$select", select))
+
+        if order_by:
+            self.append_option(QueryOption("$orderby", order_by))
+
         if expand:
             self.append_option(QueryOption("$expand", expand))
 
         if filter:
             self.append_option(QueryOption("$filter", filter))
 
-        if select:
-            self.append_option(QueryOption("$select", select))
-
         if top:
-            self.append_option(QueryOption("$top", top))
+            self.append_option(QueryOption("$top", str(top)))
 
         if skip:
-            self.append_option(QueryOption("$skip", skip))
+            self.append_option(QueryOption("$skip", str(skip)))
 
-        if order_by:
-            self.append_option(QueryOption("$orderby", order_by))
+        if skip_token:
+            self.append_option(QueryOption("$skipToken", skip_token))
+
+        if count:
+            self.append_option(QueryOption("$count", str(count).lower()))
