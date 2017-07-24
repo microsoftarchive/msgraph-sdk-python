@@ -171,6 +171,33 @@ class AuthProvider(AuthProviderBase):
 
         return "{}?{}".format(self._auth_server_url, urlencode(params))
 
+    def authenticate_client_credentials(self, client_secret, scope):
+        params = {
+            "client_id": self.client_id,
+            "client_secret": client_secret,
+            "grant_type": "client_credentials"
+        }
+
+        if scope is not None:
+            params["scope"] = resource
+
+        auth_url = self._auth_token_url
+        headers = {"Content-Type": "application/x-www-form-urlencoded"}
+        response = self._http_provider.send(method="POST",
+                                            headers=headers,
+                                            url=auth_url,
+                                            data=params)
+
+        rcont = json.loads(response.content)
+        self._session = self._session_type(rcont["token_type"],
+                                rcont["expires_in"],
+                                rcont["access_token"],
+                                self.client_id,
+                                self._auth_token_url,
+                                redirect_uri,
+                                rcont["refresh_token"] if "refresh_token" in rcont else None,
+                                client_secret)
+
     def authenticate(self, code, redirect_uri, client_secret, resource=None):
         """Takes in a code, gets the access token and creates a session.
 
