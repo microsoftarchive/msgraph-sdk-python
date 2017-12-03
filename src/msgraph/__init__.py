@@ -3,6 +3,9 @@
 """
 # Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 """
+import warnings
+
+warnings.warn('The Python SDK for Microsoft Graph has been deprecated. For the latest guidance on Python development for Microsoft Graph, see https://aka.ms/graph-python-samples. For information on how to suppress this warning, see https://docs.python.org/3/library/warnings.html#the-warnings-filter', Warning)
 
 from .model.body_type import BodyType
 from .model.importance import Importance
