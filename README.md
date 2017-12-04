@@ -1,4 +1,5 @@
-# Getting started with the Microsoft Graph SDK for Python
+# Microsoft Graph SDK for Python
+*This library is no longer actively supported. To integrate Microsoft Graph into your Python solution, we recommend using [REST](https://developer.microsoft.com/en-us/graph/docs/concepts/use_the_api) and taking a look at our new [Python samples and documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/python).* 
 
 ------------------------------------------------------------------------
 [![Build status](https://ci.appveyor.com/api/projects/status/x1cjahp817w6r455?svg=true)](https://ci.appveyor.com/project/OneDrive/vroom-client-python)
