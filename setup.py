@@ -32,7 +32,7 @@ def main():
 
         version=version,
 
-        description='Official Python SDK for interfacing with the Graph API',
+        description='Python SDK for the Microsoft Graph API [DEPRECATED]',
         long_description=long_description,
 
         url='http://graph.microsoft.io',
