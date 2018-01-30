@@ -1,11 +1,12 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 """
 # Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-# 
+#
 #  This file was generated and any changes will be overwritten.
 """
 
 from __future__ import unicode_literals
+from ..graph_object_base import GraphObjectBase
 from ..model.identity_set import IdentitySet
 from ..model.item_reference import ItemReference
 from ..model.audio import Audio
@@ -35,8 +36,8 @@ class DriveItem(Entity):
     def created_by(self):
         """
         Gets and sets the createdBy
-        
-        Returns: 
+
+        Returns:
             :class:`IdentitySet<microsoft.graph.model.identity_set.IdentitySet>`:
                 The createdBy
         """
@@ -57,13 +58,13 @@ class DriveItem(Entity):
     def created_date_time(self):
         """
         Gets and sets the createdDateTime
-        
+
         Returns:
             datetime:
                 The createdDateTime
         """
         if "createdDateTime" in self._prop_dict:
-            return datetime.strptime(self._prop_dict["createdDateTime"].replace("Z", ""), "%Y-%m-%dT%H:%M:%S.%f")
+            return datetime.strptime(self._prop_dict["createdDateTime"].replace("Z", ""), "%Y-%m-%dT%H:%M:%S")
         else:
             return None
 
@@ -75,7 +76,7 @@ class DriveItem(Entity):
     def c_tag(self):
         """
         Gets and sets the cTag
-        
+
         Returns:
             str:
                 The cTag
@@ -93,7 +94,7 @@ class DriveItem(Entity):
     def description(self):
         """
         Gets and sets the description
-        
+
         Returns:
             str:
                 The description
@@ -111,7 +112,7 @@ class DriveItem(Entity):
     def e_tag(self):
         """
         Gets and sets the eTag
-        
+
         Returns:
             str:
                 The eTag
@@ -129,8 +130,8 @@ class DriveItem(Entity):
     def last_modified_by(self):
         """
         Gets and sets the lastModifiedBy
-        
-        Returns: 
+
+        Returns:
             :class:`IdentitySet<microsoft.graph.model.identity_set.IdentitySet>`:
                 The lastModifiedBy
         """
@@ -151,13 +152,13 @@ class DriveItem(Entity):
     def last_modified_date_time(self):
         """
         Gets and sets the lastModifiedDateTime
-        
+
         Returns:
             datetime:
                 The lastModifiedDateTime
         """
         if "lastModifiedDateTime" in self._prop_dict:
-            return datetime.strptime(self._prop_dict["lastModifiedDateTime"].replace("Z", ""), "%Y-%m-%dT%H:%M:%S.%f")
+            return datetime.strptime(self._prop_dict["lastModifiedDateTime"].replace("Z", ""), "%Y-%m-%dT%H:%M:%S")
         else:
             return None
 
@@ -169,7 +170,7 @@ class DriveItem(Entity):
     def name(self):
         """
         Gets and sets the name
-        
+
         Returns:
             str:
                 The name
@@ -187,8 +188,8 @@ class DriveItem(Entity):
     def parent_reference(self):
         """
         Gets and sets the parentReference
-        
-        Returns: 
+
+        Returns:
             :class:`ItemReference<microsoft.graph.model.item_reference.ItemReference>`:
                 The parentReference
         """
@@ -209,7 +210,7 @@ class DriveItem(Entity):
     def size(self):
         """
         Gets and sets the size
-        
+
         Returns:
             int:
                 The size
@@ -227,7 +228,7 @@ class DriveItem(Entity):
     def web_dav_url(self):
         """
         Gets and sets the webDavUrl
-        
+
         Returns:
             str:
                 The webDavUrl
@@ -245,7 +246,7 @@ class DriveItem(Entity):
     def web_url(self):
         """
         Gets and sets the webUrl
-        
+
         Returns:
             str:
                 The webUrl
@@ -263,8 +264,8 @@ class DriveItem(Entity):
     def audio(self):
         """
         Gets and sets the audio
-        
-        Returns: 
+
+        Returns:
             :class:`Audio<microsoft.graph.model.audio.Audio>`:
                 The audio
         """
@@ -285,8 +286,8 @@ class DriveItem(Entity):
     def deleted(self):
         """
         Gets and sets the deleted
-        
-        Returns: 
+
+        Returns:
             :class:`Deleted<microsoft.graph.model.deleted.Deleted>`:
                 The deleted
         """
@@ -307,8 +308,8 @@ class DriveItem(Entity):
     def file(self):
         """
         Gets and sets the file
-        
-        Returns: 
+
+        Returns:
             :class:`File<microsoft.graph.model.file.File>`:
                 The file
         """
@@ -329,8 +330,8 @@ class DriveItem(Entity):
     def file_system_info(self):
         """
         Gets and sets the fileSystemInfo
-        
-        Returns: 
+
+        Returns:
             :class:`FileSystemInfo<microsoft.graph.model.file_system_info.FileSystemInfo>`:
                 The fileSystemInfo
         """
@@ -351,8 +352,8 @@ class DriveItem(Entity):
     def folder(self):
         """
         Gets and sets the folder
-        
-        Returns: 
+
+        Returns:
             :class:`Folder<microsoft.graph.model.folder.Folder>`:
                 The folder
         """
@@ -373,8 +374,8 @@ class DriveItem(Entity):
     def image(self):
         """
         Gets and sets the image
-        
-        Returns: 
+
+        Returns:
             :class:`Image<microsoft.graph.model.image.Image>`:
                 The image
         """
@@ -395,8 +396,8 @@ class DriveItem(Entity):
     def location(self):
         """
         Gets and sets the location
-        
-        Returns: 
+
+        Returns:
             :class:`GeoCoordinates<microsoft.graph.model.geo_coordinates.GeoCoordinates>`:
                 The location
         """
@@ -417,8 +418,8 @@ class DriveItem(Entity):
     def photo(self):
         """
         Gets and sets the photo
-        
-        Returns: 
+
+        Returns:
             :class:`Photo<microsoft.graph.model.photo.Photo>`:
                 The photo
         """
@@ -439,8 +440,8 @@ class DriveItem(Entity):
     def remote_item(self):
         """
         Gets and sets the remoteItem
-        
-        Returns: 
+
+        Returns:
             :class:`RemoteItem<microsoft.graph.model.remote_item.RemoteItem>`:
                 The remoteItem
         """
@@ -461,8 +462,8 @@ class DriveItem(Entity):
     def search_result(self):
         """
         Gets and sets the searchResult
-        
-        Returns: 
+
+        Returns:
             :class:`SearchResult<microsoft.graph.model.search_result.SearchResult>`:
                 The searchResult
         """
@@ -483,8 +484,8 @@ class DriveItem(Entity):
     def shared(self):
         """
         Gets and sets the shared
-        
-        Returns: 
+
+        Returns:
             :class:`Shared<microsoft.graph.model.shared.Shared>`:
                 The shared
         """
@@ -505,8 +506,8 @@ class DriveItem(Entity):
     def special_folder(self):
         """
         Gets and sets the specialFolder
-        
-        Returns: 
+
+        Returns:
             :class:`SpecialFolder<microsoft.graph.model.special_folder.SpecialFolder>`:
                 The specialFolder
         """
@@ -527,8 +528,8 @@ class DriveItem(Entity):
     def video(self):
         """
         Gets and sets the video
-        
-        Returns: 
+
+        Returns:
             :class:`Video<microsoft.graph.model.video.Video>`:
                 The video
         """
@@ -549,8 +550,8 @@ class DriveItem(Entity):
     def package(self):
         """
         Gets and sets the package
-        
-        Returns: 
+
+        Returns:
             :class:`Package<microsoft.graph.model.package.Package>`:
                 The package
         """
@@ -571,8 +572,8 @@ class DriveItem(Entity):
     def created_by_user(self):
         """
         Gets and sets the createdByUser
-        
-        Returns: 
+
+        Returns:
             :class:`User<microsoft.graph.model.user.User>`:
                 The createdByUser
         """
@@ -593,8 +594,8 @@ class DriveItem(Entity):
     def last_modified_by_user(self):
         """
         Gets and sets the lastModifiedByUser
-        
-        Returns: 
+
+        Returns:
             :class:`User<microsoft.graph.model.user.User>`:
                 The lastModifiedByUser
         """
@@ -614,8 +615,8 @@ class DriveItem(Entity):
     @property
     def permissions(self):
         """Gets and sets the permissions
-        
-        Returns: 
+
+        Returns:
             :class:`PermissionsCollectionPage<microsoft.graph.request.permissions_collection.PermissionsCollectionPage>`:
                 The permissions
         """
@@ -627,8 +628,8 @@ class DriveItem(Entity):
     @property
     def children(self):
         """Gets and sets the children
-        
-        Returns: 
+
+        Returns:
             :class:`ChildrenCollectionPage<microsoft.graph.request.children_collection.ChildrenCollectionPage>`:
                 The children
         """
@@ -640,8 +641,8 @@ class DriveItem(Entity):
     @property
     def thumbnails(self):
         """Gets and sets the thumbnails
-        
-        Returns: 
+
+        Returns:
             :class:`ThumbnailsCollectionPage<microsoft.graph.request.thumbnails_collection.ThumbnailsCollectionPage>`:
                 The thumbnails
         """

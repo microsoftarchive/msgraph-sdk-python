@@ -1,11 +1,12 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 """
 # Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-# 
+#
 #  This file was generated and any changes will be overwritten.
 """
 
 from __future__ import unicode_literals
+from ..graph_object_base import GraphObjectBase
 from ..model.identity_set import IdentitySet
 from ..model.sharing_invitation import SharingInvitation
 from ..model.item_reference import ItemReference
@@ -21,8 +22,8 @@ class Permission(Entity):
     def granted_to(self):
         """
         Gets and sets the grantedTo
-        
-        Returns: 
+
+        Returns:
             :class:`IdentitySet<microsoft.graph.model.identity_set.IdentitySet>`:
                 The grantedTo
         """
@@ -43,8 +44,8 @@ class Permission(Entity):
     def invitation(self):
         """
         Gets and sets the invitation
-        
-        Returns: 
+
+        Returns:
             :class:`SharingInvitation<microsoft.graph.model.sharing_invitation.SharingInvitation>`:
                 The invitation
         """
@@ -65,8 +66,8 @@ class Permission(Entity):
     def inherited_from(self):
         """
         Gets and sets the inheritedFrom
-        
-        Returns: 
+
+        Returns:
             :class:`ItemReference<microsoft.graph.model.item_reference.ItemReference>`:
                 The inheritedFrom
         """
@@ -87,8 +88,8 @@ class Permission(Entity):
     def link(self):
         """
         Gets and sets the link
-        
-        Returns: 
+
+        Returns:
             :class:`SharingLink<microsoft.graph.model.sharing_link.SharingLink>`:
                 The link
         """
@@ -109,7 +110,7 @@ class Permission(Entity):
     def roles(self):
         """
         Gets and sets the roles
-        
+
         Returns:
             str:
                 The roles
@@ -127,7 +128,7 @@ class Permission(Entity):
     def share_id(self):
         """
         Gets and sets the shareId
-        
+
         Returns:
             str:
                 The shareId

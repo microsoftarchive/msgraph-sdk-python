@@ -21,6 +21,7 @@
  THE SOFTWARE.
 ------------------------------------------------------------------------------
 '''
+from ..request.drive_item_request_builder import DriveItemRequestBuilder
 from ..request.graph_service_client import GraphServiceClient
 from ..request.drive_request_builder import DriveRequestBuilder
 
@@ -55,7 +56,7 @@ def item(self, drive=None, id_=None, path=None):
 def drive(self):
     """Gets the user's default drive
 
-    Returns: 
+    Returns:
         :class:`DriveRequestBuilder<msgraph.requests.drive_request_builder.DriveRequestBuilder>`:
             User's default drive
     """
@@ -63,3 +64,19 @@ def drive(self):
 
 GraphServiceClient.item = item
 GraphServiceClient.drive = drive
+
+
+def item_by_path(self, path):
+    """Get an item by path in OneDrive
+
+    Args
+        path (str): The path to the requested item
+    Returns:
+        :class:`ItemRequestBuilder<onedrivesdk.requests.item_request_builder.ItemRequestBuilder>`:
+            A request builder for an item given a path
+    """
+    #strip any leading '/'
+    path = str(path)[1:] if str(path)[0] == "/" else str(path)
+    return DriveItemRequestBuilder(self.append_to_request_url("root:/"+str(path)+":"), self._client)
+
+DriveRequestBuilder.item_by_path = item_by_path

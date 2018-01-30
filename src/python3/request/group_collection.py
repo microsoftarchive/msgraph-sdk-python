@@ -66,7 +66,7 @@ class GroupCollectionRequestBuilder(RequestBuilderBase):
         """
         return group_request_builder.GroupRequestBuilder(self.append_to_request_url(str(key)), self._client)
 
-    def request(self,top=None, order_by=None, options=None):
+    def request(self, expand=None, select=None, filter=None, top=None, order_by=None, options=None):
         """Builds the GroupCollectionRequest
         
         Args:
@@ -85,7 +85,7 @@ class GroupCollectionRequestBuilder(RequestBuilderBase):
                 The GroupCollectionRequest
         """
         req = GroupCollectionRequest(self._request_url, self._client, options)
-        req._set_query_options(top=top, order_by=order_by, )
+        req._set_query_options(expand=expand, select=select, filter=filter, top=top, order_by=order_by)
         return req
 
     def get(self):
